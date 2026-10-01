@@ -63,5 +63,5 @@ Choices made when restating the system as a general kit:
 - Folder names for templates and workflows are simplified to `templates/` and `workflows/`.
 - Owner and visibility labels are generic.
 - The task board setup is described with placeholders and is required for the task workflows. Calendar reminders and a shared output folder are optional.
-- A license will be chosen before any public release.
+- The kit is released under the MIT License; see `LICENSE`.
 - The live workspace stays private. This repository holds only the shareable kit.
