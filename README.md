@@ -2,7 +2,7 @@
 
 Relocation Playbook turns an AI assistant into a chief of staff for an international move.
 
-Moving countries means dozens of interdependent moving parts (visas, money, shipping, healthcare, housing, jobs, family logistics), and plans change weekly. The usual result is facts scattered across notes, chats, and spreadsheets, so nobody is sure what is current. This kit gives you and your assistant one shared system that keeps the move straight.
+Moving countries means dozens of interdependent moving parts (visas, money, shipping, healthcare, housing, jobs, family logistics), and plans change weekly. The usual result is facts scattered across notes, chats, and spreadsheets, so nobody is sure what is current. This kit gives you and your assistant one shared system that keeps the move straight, and it is designed so that only one person has to be the hands-on user while the rest of the household stays in the loop.
 
 This repository holds the reusable kit only. It is not anyone's live relocation record. You keep your own working copy somewhere private and fill it in with your own countries, dates, and people.
 
@@ -14,6 +14,7 @@ Everything here is a set of instructions and templates that an assistant follows
 
 What it gives you:
 
+- **Only one person has to drive.** One member of the household works with the assistant. Everyone else can simply join the shared review, report progress on the tasks they own, and look things up on the task board or dashboard when they want to. In a shared review the assistant uses plain language, with no tool names, jargon, or file names, and anything the household will read is shown to you for approval first. Nobody else has to learn the tooling.
 - **One source of truth.** Facts, deadlines, open decisions, and research questions live in a few small structured records. Agendas and summaries are composed from them by the assistant, so nothing drifts in a forgotten note.
 - **It knows how sure it is.** Each fact is marked confirmed, assumption, or recommendation, with its source and the date it was last checked.
 - **Every session closes properly.** Solo or shared, the assistant ends by updating the records, proposing task board and agenda changes for your yes, and reporting anything it did not manage to update.
