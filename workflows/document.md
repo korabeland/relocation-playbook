@@ -4,7 +4,7 @@ Use when the user asks you to prepare a letter, checklist, comparison table, pac
 
 Approval contract: see `AGENTS.md`. Creating a draft in `Documents/` is allowed without asking. Sending or submitting anything is never allowed.
 
-1. Draft the document at `Documents/<descriptive-name>.md`. Anything another household member will read goes in `Documents/`, not elsewhere, and is written in plain language.
+1. Draft the document at `Documents/<descriptive-name>.md`, in plain language. For research or weekly records, use their designated workflows and folders from `AGENTS.md`.
 2. Mark it as a draft at the top, with the date and any facts it relies on.
 3. Tell the user it is ready and needs review. State what is unconfirmed or assumed.
 4. Do not send, submit, sign, or file it, and do not offer to. The user does that outside the assistant.

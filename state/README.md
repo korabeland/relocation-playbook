@@ -4,7 +4,7 @@ Small structured files that hold the facts, deadlines, and decisions of the move
 
 "Composed by the assistant" means exactly that. There is no program that renders these views. The assistant reads the files and writes the summary by following `workflows/session-end.md`.
 
-Every file ships empty, with a commented example of one entry. Synthetic filled-in versions are in `examples/synthetic-relocation/state/`.
+The YAML records ship empty, with a commented example of one entry. The Markdown files contain prompts to fill in. Synthetic filled-in records are in `examples/synthetic-relocation/state/`.
 
 ## Files
 
@@ -64,12 +64,7 @@ The snapshot date is the last successful reconciliation checkpoint. Advance it t
 
 One designated writer per file. This is a convention, not a lock. Nothing prevents a second tool or person from editing a file, so check the date and content before trusting it.
 
-| File | Designated writer |
-|---|---|
-| `deadlines.yaml`, `facts.yaml`, `decisions.yaml`, `contingencies.md`, `board-snapshot.md` | Session close |
-| `research-queue.yaml` | Session close writes `status`. The research workflow only reads it |
-
-The full table, including files outside `state/`, is in `AGENTS.md`.
+See the file ownership table in `AGENTS.md` for the designated writers, including who adds research queue entries and changes their status.
 
 ## The visibility field
 

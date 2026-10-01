@@ -8,7 +8,7 @@ This is a case study about the process. It is not about the household. Every exa
 
 I am claiming that an assistant working from a small set of plain files was useful for research, drafting, and keeping a changing plan visible. I am also claiming that the first version of the system failed in a specific, fixable way, and that I changed it.
 
-I am not claiming that it saved a measured amount of time, that it prevented missed deadlines, or that it ran by itself. I did not measure any of those things. Everything the assistant did, it did while I was in the conversation. The scheduled agents in my original design were never built. They appear only in [design-history.md](design-history.md).
+I am not claiming that it saved a measured amount of time, that it prevented missed deadlines, or that it ran by itself. I did not measure any of those things. Everything the assistant did, it did while I was in the conversation. The scheduled agents in my original design were never built. See [design-history.md](design-history.md) for those ideas.
 
 ## 1. The coordination problem
 

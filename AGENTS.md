@@ -65,7 +65,7 @@ Each file has one designated writer. This is a convention that keeps edits predi
 
 ## Roles and what exists
 
-Only one role has a procedure behind it.
+The following roles have procedures behind them.
 
 | Role | Status | Behavior file |
 |---|---|---|

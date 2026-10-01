@@ -36,7 +36,7 @@ Be clear about what you are adopting.
 | The folder layout, plan, backlog, state records, templates, and session workflows | Used in one real relocation, then restated here in general wording. |
 | The Notion task board and Calendar reminders | Used in the same setup. Setup notes here are written fresh with placeholders and have not been exercised by anyone else. |
 | The synthetic example in `examples/` | Written for this kit. It shows the shapes of the records, not a tested run by another household. |
-| Scheduled agents, text-message intake, recurring audits, an arrival concierge | Never built. They appear only in `docs/design-history.md`, labeled as future ideas. |
+| Scheduled agents, text-message intake, recurring audits, an arrival concierge | Never built. See `docs/design-history.md` for the future ideas. |
 
 The kit makes no claim about time saved or missed deadlines avoided. See the case study for what the original process did and did not show.
 
@@ -47,7 +47,7 @@ The short version. The full guide is `docs/adoption.md`.
 1. Copy this kit into a private working folder your assistant can read and write. Keep that copy separate from this repository so personal data never lands here.
 2. Fill in `PLAN.md` with your own origin, destination, constraints, and a target window or fixed date.
 3. Create the required task board from `docs/notion-setup.md`. The board is authoritative; `state/board-snapshot.md` is only a cache.
-4. Seed a few facts, deadlines, decisions, and research questions in `state/`, each with a source and a review date.
+4. Seed a few facts, deadlines, decisions, and research questions using the schemas in `state/README.md`.
 5. Run one review session using `workflows/session-start.md`, research one question, and close with `workflows/session-end.md`.
 6. Repeat on a short rhythm, and close solo sessions the same way you close shared ones.
 
