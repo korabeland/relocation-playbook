@@ -46,7 +46,7 @@ The short version. The full guide is `docs/adoption.md`.
 
 1. Copy this kit into a private working folder your assistant can read and write. Keep that copy separate from this repository so personal data never lands here.
 2. Fill in `PLAN.md` with your own origin, destination, constraints, and a target window or fixed date.
-3. If you use a task board, create it from `docs/notion-setup.md`. Without one, you can track tasks in `state/board-snapshot.md` directly, but the original setup never ran that way.
+3. Create the required task board from `docs/notion-setup.md`. The board is authoritative; `state/board-snapshot.md` is only a cache.
 4. Seed a few facts, deadlines, decisions, and research questions in `state/`, each with a source and a review date.
 5. Run one review session using `workflows/session-start.md`, research one question, and close with `workflows/session-end.md`.
 6. Repeat on a short rhythm, and close solo sessions the same way you close shared ones.
@@ -54,7 +54,8 @@ The short version. The full guide is `docs/adoption.md`.
 ## What you need
 
 - An AI assistant that can read and write files in a folder you control. The original ran in a terminal assistant; any assistant that follows the instructions in `AGENTS.md` should work, though only the original setup has been tried.
-- Optional: a Notion workspace for the task board, a Drive-style shared folder for outputs your household reads, and a calendar for deadline reminders.
+- A task board set up using `docs/notion-setup.md`.
+- Optional: a separate Drive-style shared folder for approved outputs your household reads, and a calendar for deadline reminders.
 - No programming is required.
 
 ## Privacy

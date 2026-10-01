@@ -1,6 +1,6 @@
 # Board snapshot (synthetic example)
 
-Snapshot date: 2031-01-18
+Snapshot date: 2031-01-18 (last successful reconciliation, UTC)
 
 Coverage: all pages known to the assistant as of the snapshot date. Pages created on the board since the last session by other people may be missing.
 

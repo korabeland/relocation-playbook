@@ -8,7 +8,7 @@ Approval contract: see `AGENTS.md`. Reading is always allowed. Nothing in this w
 
 1. Read `state/board-snapshot.md`, `state/deadlines.yaml`, `state/decisions.yaml`, and `state/facts.yaml`. Note the snapshot date.
 2. Read `PLAN.md` and `BACKLOG.md`.
-3. If the snapshot is more than a few days old, or empty, check the board for pages changed since its date. Fetch only those pages. Report anything you could not read.
+3. Check the board for task pages changed on or after the snapshot date (inclusive, from midnight UTC), even if the date is today. If the snapshot is empty or undated, establish initial coverage from the board without an unconfirmed bulk read. Use successfully read pages for this session and report anything you could not read; do not treat unread task status as current. Session close alone saves the reconciliation checkpoint, retaining its prior date on any read failure.
 4. Say in one or two sentences what changed since the last session and what is overdue or due within two weeks. Flag any fact past its `verify_by` date.
 
 ## Solo session

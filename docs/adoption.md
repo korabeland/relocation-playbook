@@ -5,12 +5,12 @@ How to turn this kit into your own working relocation workspace. Plan for a firs
 ## Before you start
 
 - You need an AI assistant that can read and write files in a folder you control, and follow written instructions. The original ran in a terminal assistant. Other assistants may work, but only the original setup has been tried.
-- Decide whether you will use outside services. A Notion task board, a shared Drive-style folder, and a calendar make up the full setup described here. The folder, plan, state files, templates, and session workflows work on their own. Without a task board the loop is simpler, and without a shared folder you will share outputs another way.
+- Set up a task board using `docs/notion-setup.md`; the task workflows require it. A shared Drive-style folder for approved outputs and a calendar for reminders are optional. Without a shared folder you will share approved outputs another way.
 - Decide who else is moving with you and what they should see. Sharing with your household is not the same as publishing, and your working copy should never be public.
 
 ## 1. Make a private working copy
 
-Copy the kit's files into a new folder only you and your household can reach, such as a private Drive folder. The kit repository stays the clean template. Your folder is the live instance. Keep the two separate so that your dates, finances, and documents never reach a repository.
+Copy the kit's files into a new folder accessible only to you and your assistant, such as an owner-only Drive folder. Give household members access only to reviewed, approved copies of outputs in a separate shared location. Keep drafts, state records, memory, research, and individual job-search notes in the owner-only workspace. The kit repository stays the clean template. Your folder is the live instance. Keep the two separate so that your dates, finances, and documents never reach a repository.
 
 If you put your working copy under version control, keep it in a private repository of its own, and check what you commit. `.gitignore` in this kit excludes common local files and document formats, but it cannot know what is sensitive to you.
 
@@ -24,11 +24,11 @@ Look at `examples/synthetic-relocation/PLAN.md` for how a filled-in plan reads.
 
 ## 3. Set up the task board
 
-Follow `docs/notion-setup.md`, or decide to keep tasks in `state/board-snapshot.md`. The second option is a variation the original never ran, so expect to adjust the workflows' wording. Record your choice in the `[TASK_BOARD]` line in `AGENTS.md`.
+Follow `docs/notion-setup.md` and record the board location in the `[TASK_BOARD]` line in `AGENTS.md`. The board is authoritative; `state/board-snapshot.md` is only a cache.
 
 ## 4. Connect the assistant
 
-Give the assistant access to the folder and, if you use them, to the board and the calendar. Set its permissions yourself and explicitly. Allow only what you are comfortable with. Do not import another person's assistant configuration.
+Give the assistant access to the owner-only workspace and the task board, and to the shared output location and calendar if you use them. Set its permissions yourself and explicitly. Allow only what you are comfortable with. Do not import another person's assistant configuration.
 
 Fill in `[CONNECTED_SERVICES]` in `AGENTS.md`. See `docs/drive-and-calendar-setup.md`.
 

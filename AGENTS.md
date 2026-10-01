@@ -11,7 +11,7 @@ Four jobs, each done by a different part. They are separate responsibilities, no
 | Strategy and constraints | `PLAN.md` | Changed only with the user's approval. |
 | Tasks | The task board in `[TASK_BOARD]` | Authoritative for task status. See `docs/notion-setup.md`. |
 | Facts, deadlines, decisions, research priorities | `state/` | Authoritative for those records. |
-| Knowledge and shared outputs | `Research/`, `Documents/`, `Weekly/` | Files the household reads. |
+| Knowledge and shared outputs | `Research/`, `Documents/`, `Weekly/` | Owner-only files; share only reviewed, approved copies. |
 | Continuity between conversations | `memory/` and the assistant's own memory feature, if it has one | A short index that points at the real records. |
 
 `state/board-snapshot.md` is a dated copy of the task board. It is a cache. The board stays authoritative.
@@ -21,7 +21,7 @@ Four jobs, each done by a different part. They are separate responsibilities, no
 1. Read `state/`: `deadlines.yaml`, `facts.yaml`, `decisions.yaml`, and `board-snapshot.md`. Note the snapshot date.
 2. Read `PLAN.md` for phases, triggers, and constraints.
 3. Read `BACKLOG.md` for unprocessed items.
-4. Fetch from the task board only pages that changed after the snapshot date. Do not attempt bulk reads of the whole board unless you have confirmed they work in this workspace.
+4. Fetch task pages changed on or after the snapshot date (inclusive, from midnight UTC). The date is the last successful reconciliation checkpoint; failed reads do not advance it. For trigger activation, also read matching tasks regardless of edit date, as described in `workflows/trigger-activation.md`. Do not attempt bulk reads of the whole board unless you have confirmed they work in this workspace.
 5. If the user is starting a shared review with other household members, follow `workflows/session-start.md`. If it is unclear whether the session is shared or solo, ask.
 
 ## Approval contract
@@ -145,6 +145,6 @@ If the assistant has a persistent memory feature, keep it as an index that point
 
 ## Local setup to fill in
 
-- `[TASK_BOARD]`: where tasks live, or `state/board-snapshot.md` if you keep no outside board.
+- `[TASK_BOARD]`: the required task board location, set up using `docs/notion-setup.md`. `state/board-snapshot.md` is only a cache.
 - `[CONNECTED_SERVICES]`: the services this assistant is connected to, for example a task board, a shared drive, and a calendar.
 - Details for each service are in `docs/notion-setup.md` and `docs/drive-and-calendar-setup.md`. Keep real workspace identifiers in your private copy only.

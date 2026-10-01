@@ -62,6 +62,6 @@ Choices made when restating the system as a general kit:
 - It holds templates and a synthetic example. It does not hold the original household's records.
 - Folder names for templates and workflows are simplified to `templates/` and `workflows/`.
 - Owner and visibility labels are generic.
-- The original's calendar and task board integrations are described with placeholders, and are optional.
+- The task board setup is described with placeholders and is required for the task workflows. Calendar reminders and a shared output folder are optional.
 - A license will be chosen before any public release.
 - The live workspace stays private. This repository holds only the shareable kit.

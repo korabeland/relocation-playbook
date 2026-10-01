@@ -49,7 +49,7 @@ Give the assistant access to the workspace through whatever connection your assi
 
 In the original setup, the connector had limits that shaped the design:
 - Reading the whole board in one structured query was not available on that workspace's plan. Reading single pages and searching worked, which is why the board snapshot exists.
-- Reading each page one at a time was slow and costly, which is why session start reads the snapshot and fetches only pages changed after its date.
+- Reading each page one at a time was slow and costly, which is why session start reads the snapshot and fetches task pages changed on or after its checkpoint date (inclusive, from midnight UTC). Failed reads retain the old checkpoint at session close. Trigger activation also reads matching tasks regardless of edit date because Trigger is not cached.
 
 Your workspace may behave differently. If bulk reads work for you, you can simplify. Keep the snapshot anyway if you want a dated copy you can compare against.
 

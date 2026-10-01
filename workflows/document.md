@@ -11,4 +11,4 @@ Approval contract: see `AGENTS.md`. Creating a draft in `Documents/` is allowed 
 5. If the user wants the path noted on a task page, draft that note and write it after a yes.
 6. Mention the new file at session close so the memory index and any summary list it.
 
-If the document contains personal identifiers, say so, and remind the user that this folder may be shared with the household.
+Keep the draft in the owner-only workspace. Before copying it to a household output location, show the exact content and wait for approval. If it contains personal identifiers, flag them during review.

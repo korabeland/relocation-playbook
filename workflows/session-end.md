@@ -19,29 +19,33 @@ Update only what changed:
 
 Never edit a record to say something the user did not confirm in the session.
 
-## 2. Reconcile the board snapshot
-
-Compare `state/board-snapshot.md` with the board. Find pages changed after the snapshot date, fetch only those, and update their rows. Set the snapshot date to today, even when nothing changed. Update the coverage note if you found pages that were missing. If you could not read the board, say so in the coverage note.
-
-## 3. Draft board and calendar changes
+## 2. Draft board and calendar changes
 
 If the session produced task changes, new tasks, or a logged decision for the board, show the exact changes and wait for a yes. Write only the approved ones.
 
-If a deadline was added, re-dated, completed, or dropped, show the matching calendar change (create, update, or delete a reminder). See `docs/drive-and-calendar-setup.md`. Write only after a yes, and store the returned event reference in `calendar_event`.
+If a deadline was added or re-dated, show the matching calendar creation or update. See `docs/drive-and-calendar-setup.md`. Write only after a yes, and store the returned event reference in `calendar_event`. For a completed or dropped deadline, tell the user to delete its reminder themselves; never delete it.
+
+## 3. Reconcile the board snapshot
+
+After the approved task writes, reconcile `state/board-snapshot.md` before composing any outputs. Include the returned values from every successful task write this session, including new tasks and writes from other workflows. Exclude declined or failed writes.
+
+Note the UTC date when the board check begins. Find task pages changed on or after the saved snapshot date (inclusive, from midnight UTC), fetch those pages, and update their rows and counts. If the snapshot is empty or has no date, establish its initial coverage from the board before setting a checkpoint. Do not attempt an unconfirmed bulk read. Update the coverage note to describe what was read.
+
+Advance the snapshot date to the date the check began only when the change lookup and every returned page read succeeded, even if no pages changed. If any read fails, retain the last successfully reconciled date and describe the unread pages in the coverage note. Successfully read rows and successful task writes can still be reflected, but the snapshot remains partially stale. Retaining the checkpoint ensures the next check includes unseen changes; inclusive queries also include edits later on the same day.
 
 ## 4. Compose the next-session agenda from the records
 
 Compose it from `state/`, not from memory of the conversation:
 - What we decided last time: three to five plain-language bullets, from the records that changed.
-- Action items, split by person, from open deadlines and the snapshot.
+- Action items, split by person, from open deadlines and the reconciled snapshot. If board reconciliation was incomplete, flag task status as unverified and say which information could not be read.
 - Next session topics: two to four, each with one sentence on why now.
 - Decisions needed: every `open` entry in `state/decisions.yaml`, written as question, options, and recommendation. Leave out entries marked `private`.
 
-Show it to the user. After a yes, save it where the household reads it (a page on the board, or a file in `Documents/`). Do not publish an unreviewed agenda.
+Show it to the user. After a yes, save it to the household agenda page or copy the approved file from owner-only `Documents/` to the separate shared output location. Do not publish an unreviewed agenda.
 
 ## 5. Save a session record
 
-For a session where state changed, write `Weekly/YYYY-MM-DD-session.md` with four short parts: topics discussed, decisions made, tasks updated, next steps. Keep it scannable. It is a reference log and not a transcript.
+For a session where state changed, append a separately numbered session section to `Weekly/YYYY-MM-DD-session.md`, labeled solo or shared. Create the file for the first session that day; preserve all earlier sections when adding another. Each section has four short parts: topics discussed, decisions made, tasks updated, next steps. Keep it scannable. It is a reference log and not a transcript. Keep the record owner-only; share only a reviewed, approved copy.
 
 ## 6. Update the memory index
 

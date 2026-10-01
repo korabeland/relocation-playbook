@@ -56,7 +56,9 @@ Pre-mortem prompts: scenario, owner, first move. It is Markdown because a person
 
 ### `board-snapshot.md`
 
-A dated copy of the task board: task, status, owner, due, phase. Session start reads it so that it does not have to read the whole board each time. Session close updates it from only the pages that changed. It has a coverage note because a cache can miss pages the assistant has not seen. Treat it as helpful and possibly incomplete.
+A dated copy of the task board: task, status, owner, due, phase. It does not contain Trigger values; trigger activation reads those from the board regardless of edit date. Session start reads the cache and fetches task pages changed on or after its date (inclusive, from midnight UTC). Session close reconciles successful task writes and changed pages before composing outputs, updating rows and counts.
+
+The snapshot date is the last successful reconciliation checkpoint. Advance it to the UTC date the board check began only after the change lookup and all returned page reads succeed. On a failed read, keep the previous date and note the gaps in Coverage, even if some rows were updated. Inclusive queries catch later edits on the checkpoint day. An empty snapshot needs initial board coverage before a checkpoint is set. The coverage note describes known pages and read failures; a cache can still miss pages the assistant has not seen.
 
 ## Who writes what
 
@@ -74,4 +76,4 @@ The full table, including files outside `state/`, is in `AGENTS.md`.
 - `household` means suitable to show the people who are moving together. It does not mean suitable for a public repository. Treat everything in your live instance as private.
 - `private` means held back from anything another household member will read, such as a shared summary. Use it for one person's individual matters, for example a personal job search, or for any item the household has not agreed to surface.
 
-Before composing anything another person will read, filter out `private` entries.
+Before composing anything another person will read, filter out `private` entries. Keep the workspace root owner-only; visibility labels filter outputs but do not restrict direct file access. Share only reviewed, approved copies in a separate household output location.
