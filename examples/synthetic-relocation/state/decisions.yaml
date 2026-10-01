@@ -11,6 +11,7 @@
   opened_on: 2031-01-04
   decided_as: "Sell the large items, ship the rest. Revisit only if the quotes come in far above the planning range."
   decision_log_ref: null
+  visibility: household
 
 - id: car
   question: "Sell the car before departure, or keep it for a later move?"
@@ -22,3 +23,4 @@
   opened_on: 2031-01-12
   decided_as: null
   decision_log_ref: null
+  visibility: household

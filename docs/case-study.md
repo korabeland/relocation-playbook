@@ -111,6 +111,7 @@ Here is an invented fact with provenance, next to an assumption that must not be
   source: "Lease clause, read in session"
   verified_on: 2031-01-10
   verify_by: 2031-01-15
+  visibility: household
 
 - id: sea-freight-time
   fact: "Sea freight takes about six weeks."
@@ -118,6 +119,7 @@ Here is an invented fact with provenance, next to an assumption that must not be
   source: "A general FAQ. Not a quote."
   verified_on: null
   verify_by: 2031-01-25
+  visibility: household
 ```
 
 And an invented deadline correction, as it would show up at close:

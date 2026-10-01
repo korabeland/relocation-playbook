@@ -42,13 +42,13 @@ Things you know or are relying on. Fields:
 
 ### `decisions.yaml`
 
-Open questions waiting for a call. Fields: `id`, `question`, `options` (a list), `recommendation`, `status` (`open` or `decided`), `opened_on`, `decided_as` (`null` until a choice is made, then the outcome in one line), and `decision_log_ref` (a pointer to a longer record, if you keep one, otherwise `null`).
+Open questions waiting for a call. Fields: `id`, `question`, `options` (a list), `recommendation`, `status` (`open` or `decided`), `opened_on`, `decided_as` (`null` until a choice is made, then the outcome in one line), `decision_log_ref` (a pointer to a longer record, if you keep one, otherwise `null`), and `visibility` (`household` or `private`).
 
-The session summary's "Decisions needed" section is composed from every `open` entry here, in plain language rather than raw fields.
+The session summary's "Decisions needed" section is composed from `open` entries here under the visibility rules below, in plain language rather than raw fields.
 
 ### `research-queue.yaml`
 
-Prioritized research questions. Fields: `id`, `topic`, `why` (the brief), `priority` (lowest number first), `status` (`queued` or `done`), and `output` (the path where the finished file goes). The research workflow takes the lowest-numbered queued entry when you ask it to "do some research" with no topic. Session close flips `status` to `done` after the output file exists.
+Prioritized research questions. Fields: `id`, `topic`, `why` (the brief), `priority` (lowest number first), `status` (`queued` or `done`), `output` (the path where the finished file goes), and `visibility` (`household` or `private`). The research workflow takes the lowest-numbered queued entry when you ask it to "do some research" with no topic. Session close flips `status` to `done` after the output file exists.
 
 ### `contingencies.md`
 
@@ -67,6 +67,8 @@ One designated writer per file. This is a convention, not a lock. Nothing preven
 See the file ownership table in `AGENTS.md` for the designated writers, including who adds research queue entries and changes their status.
 
 ## The visibility field
+
+Every state record requires `visibility`, with the values below. An unlabeled record is treated as private and never shared.
 
 - `household` means suitable to show the people who are moving together. It does not mean suitable for a public repository. Treat everything in your live instance as private.
 - `private` means held back from anything another household member will read, such as a shared summary. Use it for one person's individual matters, for example a personal job search, or for any item the household has not agreed to surface.

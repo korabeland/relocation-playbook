@@ -9,5 +9,6 @@
 #   priority: 1
 #   status: queued
 #   output: Research/healthcare/bridge-coverage.md
+#   visibility: household
 
 []
