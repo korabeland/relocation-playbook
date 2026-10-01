@@ -1,6 +1,8 @@
 # Relocation Playbook
 
-A practical kit for using an AI assistant to coordinate a complex move between countries. It provides planning templates, research and document workflows, decision records, and session routines that keep changing facts and deadlines visible. The accompanying case study explains how the method evolved, including the problems that prompted its redesign.
+Relocation Playbook turns an AI assistant into a chief of staff for an international move.
+
+Moving countries means dozens of interdependent moving parts (visas, money, shipping, healthcare, housing, jobs, family logistics), and plans change weekly. The usual result is facts scattered across notes, chats, and spreadsheets, so nobody is sure what is current. This kit gives you and your assistant one shared system that keeps the move straight.
 
 This repository holds the reusable kit only. It is not anyone's live relocation record. You keep your own working copy somewhere private and fill it in with your own countries, dates, and people.
 
@@ -8,9 +10,23 @@ This repository holds the reusable kit only. It is not anyone's live relocation 
 
 ## What this is
 
-The method came from one real relocation planned with an AI assistant working inside a folder of plain files. The assistant read a strategic plan, a small set of structured records, and a quick-capture inbox. It then researched questions, drafted documents, proposed task changes, and closed every session by updating those records.
+Everything here is a set of instructions and templates that an assistant follows during a conversation, working inside a folder of plain files. There is no program to install, no scheduler, and no service this repository runs for you. No coding is needed.
 
-Everything here is a set of instructions and templates that an assistant follows during a conversation. There is no program to install, no scheduler, and no service this repository runs for you.
+What it gives you:
+
+- **One source of truth.** Facts, deadlines, open decisions, and research questions live in a few small structured records. Agendas and summaries are composed from them by the assistant, so nothing drifts in a forgotten note.
+- **It knows how sure it is.** Each fact is marked confirmed, assumption, or recommendation, with its source and the date it was last checked.
+- **Every session closes properly.** Solo or shared, the assistant ends by updating the records, proposing task board and agenda changes for your yes, and reporting anything it did not manage to update.
+- **Life events reshape the plan.** When an offer lands or flights get booked, one workflow finds the affected tasks and proposes moving them forward, and helps you re-date from the new date. Deadlines are marked hard (legal or booked) or soft (self-imposed).
+- **Research on tap.** Say "do some research" and the assistant takes the next priority question from a queue and writes up what it finds, with sources.
+- **You stay in charge.** The assistant drafts and proposes, and you say yes before anything outside the folder changes. It never deletes items in your other services.
+- **Built for households.** Every record is labeled household or private, an unlabeled record counts as private, and a personal job search stays separate from shared planning.
+
+What you get: fill-in templates, eight step-by-step routines, a small invented example household, setup guides for Notion, Google Drive, and Calendar, and a case study.
+
+Why trust it: it was used in one real relocation, and the case study is honest about that. It leads with what broke and why the system was rebuilt, and says plainly what was never built or measured.
+
+What it is not: an app, an autopilot, or legal or tax advice for any particular country.
 
 ## What is in the kit
 
