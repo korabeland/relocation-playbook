@@ -6,7 +6,7 @@ Moving countries means dozens of interdependent moving parts (visas, money, ship
 
 This repository holds the reusable kit only. It is not anyone's live relocation record. You keep your own working copy somewhere private and fill it in with your own countries, dates, and people.
 
-**Status: private while under review.** This kit is released under the MIT License; see `LICENSE`.
+This kit is released under the MIT License; see `LICENSE`.
 
 ## What this is
 
