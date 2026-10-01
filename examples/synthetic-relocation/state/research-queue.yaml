@@ -1,0 +1,33 @@
+# Synthetic example. Invented research questions.
+
+- id: bridge-coverage
+  topic: "Health coverage options for the first three months at the destination"
+  why: "Our coverage ends at departure. Compare options, costs, and start dates."
+  priority: 1
+  status: done
+  output: Research/healthcare/bridge-coverage.md
+  visibility: household
+
+- id: ship-or-sell
+  topic: "Shipping versus selling household furniture"
+  why: "We need a rule of thumb before we collect quotes: which items are worth shipping."
+  priority: 2
+  status: done
+  output: Research/shipping/ship-or-sell.md
+  visibility: household
+
+- id: pet-transport
+  topic: "Pet transport options and certificate requirements"
+  why: "The cat must travel with us. We need the options, lead times, and paperwork."
+  priority: 3
+  status: queued
+  output: Research/admin/pet-transport.md
+  visibility: household
+
+- id: banking-setup
+  topic: "Opening a bank account from abroad before arrival"
+  why: "We want rent and salary arrangements in place at arrival."
+  priority: 4
+  status: queued
+  output: Research/finance/banking-setup.md
+  visibility: household

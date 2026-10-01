@@ -1,0 +1,26 @@
+# Synthetic example. Invented decisions.
+
+- id: ship-or-sell
+  question: "Ship the furniture or sell it and buy new at the destination?"
+  options:
+    - "Ship everything"
+    - "Sell the large items, ship the rest"
+    - "Sell everything"
+  recommendation: "Sell the large items, ship the rest, pending the shipping quotes"
+  status: decided
+  opened_on: 2031-01-04
+  decided_as: "Sell the large items, ship the rest. Revisit only if the quotes come in far above the planning range."
+  decision_log_ref: null
+  visibility: household
+
+- id: car
+  question: "Sell the car before departure, or keep it for a later move?"
+  options:
+    - "Sell before departure"
+    - "Store it with a relative and decide later"
+  recommendation: "Sell before departure, unless storage is free"
+  status: open
+  opened_on: 2031-01-12
+  decided_as: null
+  decision_log_ref: null
+  visibility: household

@@ -1,0 +1,16 @@
+# Dated obligations. Schema: state/README.md.
+#
+# Example entry (remove the leading "# " to use it):
+#
+# - id: example-give-notice
+#   what: "Give written notice on the current home"
+#   due: 2031-01-15
+#   hardness: hard
+#   owner: both
+#   unblocks: "Booking the moving company"
+#   calendar_event: null
+#   status: open
+#   visibility: household
+#   note: null
+
+[]

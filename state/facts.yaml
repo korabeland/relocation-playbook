@@ -1,0 +1,14 @@
+# Facts you know or are relying on. Schema: state/README.md.
+# Keep a confirmed fact, an assumption, and a recommendation distinct.
+#
+# Example entry (remove the leading "# " to use it):
+#
+# - id: example-notice-period
+#   fact: "The current lease requires 60 days written notice before moving out."
+#   confidence: confirmed
+#   source: "Lease clause, read in session on 2031-01-10"
+#   verified_on: 2031-01-10
+#   verify_by: 2031-02-01
+#   visibility: household
+
+[]

@@ -1,0 +1,14 @@
+# Prioritized research questions. Schema: state/README.md.
+# Lowest priority number runs first. The research workflow reads this file and does not edit it.
+#
+# Example entry (remove the leading "# " to use it):
+#
+# - id: example-health-coverage
+#   topic: "Health coverage options for the first three months at the destination"
+#   why: "Our current coverage ends at departure and we need a bridge. Compare options, costs, and start dates."
+#   priority: 1
+#   status: queued
+#   output: Research/healthcare/bridge-coverage.md
+#   visibility: household
+
+[]

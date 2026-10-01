@@ -1,0 +1,56 @@
+# Synthetic example. Invented deadlines.
+
+- id: give-notice
+  what: "Give written notice on the current home"
+  due: 2031-01-15
+  hardness: hard
+  owner: both
+  unblocks: "Booking the moving company"
+  calendar_event: "cal-ref-0001"
+  status: done
+  visibility: household
+  note: null
+
+- id: book-pet-transport
+  what: "Book the cat's travel and the vet certificate appointment"
+  due: 2031-01-25
+  hardness: hard
+  owner: me
+  unblocks: "Confirming the departure plan"
+  calendar_event: "cal-ref-0002"
+  status: open
+  visibility: household
+  note: null
+
+- id: shipping-quotes-in
+  what: "Collect shipping quotes at three volume levels"
+  due: 2031-01-31
+  hardness: soft
+  owner: partner
+  unblocks: "Deciding what to ship"
+  calendar_event: null
+  status: open
+  visibility: household
+  note: null
+
+- id: list-large-furniture
+  what: "List the large furniture for sale, with handover in the last week"
+  due: 2031-02-08
+  hardness: soft
+  owner: both
+  unblocks: null
+  calendar_event: null
+  status: open
+  visibility: household
+  note: "Added after the ship-or-sell decision on 2031-01-18"
+
+- id: bridge-coverage-start
+  what: "Bridge coverage must be active on arrival"
+  due: 2031-03-15
+  hardness: hard
+  owner: me
+  unblocks: null
+  calendar_event: "cal-ref-0003"
+  status: open
+  visibility: household
+  note: null

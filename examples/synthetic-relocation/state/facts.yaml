@@ -1,0 +1,33 @@
+# Synthetic example. Invented facts.
+
+- id: notice-period
+  fact: "The current lease requires 60 days written notice before moving out."
+  confidence: confirmed
+  source: "Lease clause, read in session on 2031-01-10"
+  verified_on: 2031-01-10
+  verify_by: 2031-01-15
+  visibility: household
+
+- id: pet-transport-rule
+  fact: "The airline accepts one cat in the cabin if the carrier fits under the seat."
+  confidence: assumption
+  source: "Inferred from a general airline FAQ. Not yet checked against our booking."
+  verified_on: null
+  verify_by: 2031-01-25
+  visibility: household
+
+- id: bridge-coverage-plan
+  fact: "A short-term plan covers the first three months at the destination."
+  confidence: recommendation
+  source: "Research/healthcare/bridge-coverage.md, followed provisionally pending a quote"
+  verified_on: 2031-01-12
+  verify_by: 2031-02-01
+  visibility: household
+
+- id: exchange-rate-estimate
+  fact: "We are planning with 1 unit of Country A currency as 0.9 units of Country B currency."
+  confidence: assumption
+  source: "Rounded for planning in session on 2031-01-04. Rates move daily."
+  verified_on: 2031-01-04
+  verify_by: 2031-01-18
+  visibility: household

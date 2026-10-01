@@ -1,0 +1,18 @@
+# Open questions waiting for a call. Schema: state/README.md.
+#
+# Example entry (remove the leading "# " to use it):
+#
+# - id: example-ship-or-sell
+#   question: "Ship the furniture or sell it and buy new at the destination?"
+#   options:
+#     - "Ship everything"
+#     - "Sell the large items, ship the rest"
+#     - "Sell everything"
+#   recommendation: "Sell the large items, ship the rest, pending the shipping quotes"
+#   status: open
+#   opened_on: 2031-01-10
+#   decided_as: null
+#   decision_log_ref: null
+#   visibility: household
+
+[]

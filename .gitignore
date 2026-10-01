@@ -1,0 +1,15 @@
+# Personal working copies and local configuration stay out of the shareable kit.
+instance/
+my-relocation/
+.claude/settings.local.json
+.claude/*.local.*
+.env
+.env.*
+*.local.md
+.DS_Store
+
+# Personal documents should never be committed to this repository.
+*.pdf
+*.xlsx
+*.xls
+*.ods
